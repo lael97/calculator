@@ -88,7 +88,13 @@
                             <outletCollection property="gestureRecognizers" destination="FQY-qe-dZa" appends="YES" id="SVu-7p-ZaV"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="2Ha-wh-H8I"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="2Ha-wh-H8I">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="F5S-T4-MJL">
+                            <connections>
+                                <segue destination="fn0-8C-PbM" kind="push" id="scP-ZD-jWL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="ot2-o5-KgB" id="Nyl-Td-rm7"/>
                         <outlet property="tipControl" destination="l3h-HI-z6N" id="bgG-BJ-Gcx"/>
@@ -103,7 +109,24 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="860" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1799.2" y="133.5832083958021"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="zbX-v1-8I0">
+            <objects>
+                <viewController id="fn0-8C-PbM" customClass="SettingsViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <label key="view" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SMB-HE-G3g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <navigationItem key="navigationItem" id="jJd-Nf-5pL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5em-4k-tn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2580" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LqI-ak-ru0">
@@ -116,12 +139,31 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="djK-e0-BAM"/>
+                        <segue destination="mOS-6W-dnD" kind="relationship" relationship="rootViewController" id="djK-e0-BAM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FD3-V1-2KU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-63.200000000000003" y="-564.46776611694156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VRn-Mo-Ilz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mOS-6W-dnD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="SND-x9-91L"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9L6-ki-IFY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1Qq-2M-awJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvN-1z-oZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
